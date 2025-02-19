@@ -1,3 +1,4 @@
+import { theme } from '@/constants/theme';
 import React from 'react';
 import { Text, View, StyleSheet } from "react-native";
 
@@ -14,7 +15,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: theme.colorWhite,
   },
   text: {
     fontSize: 24,
