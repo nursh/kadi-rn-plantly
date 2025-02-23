@@ -1,11 +1,9 @@
-import { Link, Redirect, Tabs } from "expo-router";
+import { Redirect, Tabs } from "expo-router";
 import React from "react";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import Entypo from "@expo/vector-icons/Entypo";
-import AntDesign from '@expo/vector-icons/AntDesign';
 import { theme } from "@/theme";
 import { useUserStore } from "@/store/userStore";
-import { Pressable } from "react-native";
 
 
 export default function Layout() {
@@ -24,20 +22,13 @@ export default function Layout() {
       }}
     >
       <Tabs.Screen
-        name="index"
+        name="(home)"
         options={{
-          title: "Home",
           tabBarIcon: ({ size, color }) => (
             <FontAwesome5 name="canadian-maple-leaf" size={size} color={color} />
           ),
-          headerRight: () => (
-            <Link href="/new" asChild>
-              <Pressable style={{ marginRight: 18 }} hitSlop={20}>
-                <AntDesign name="pluscircleo" size={24} color={theme.colorGreen} />
-              </Pressable>
-            </Link>
-          ),
-          tabBarShowLabel: false
+          tabBarShowLabel: false,
+          headerShown: false
         }}
       />
       <Tabs.Screen
